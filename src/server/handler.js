@@ -1,3 +1,4 @@
 async function postPredictHandler(request, h) {}
 
-module.exports = postPredictHandler;
+async function getHistoriesHandler(request, h) {}
+module.exports = { postPredictHandler, getHistoriesHandler };

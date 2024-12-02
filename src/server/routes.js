@@ -1,4 +1,7 @@
-const postPredictHandler = require("../server/handler");
+const {
+  postPredictHandler,
+  getHistoriesHandler,
+} = require("../server/handler");
 
 const routes = [
   {
@@ -7,8 +10,6 @@ const routes = [
     handler: postPredictHandler,
     options: {
       payload: {
-        output: "stream",
-        parse: true,
         allow: "multipart/form-data",
         multipart: true,
       },
