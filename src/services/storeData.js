@@ -1,6 +1,9 @@
+require("dotenv").config();
 const Firestore = require("@google-cloud/firestore");
 
-const db = new Firestore();
+const db = new Firestore({
+  projectId: process.env.PROJECT_ID,
+});
 const predictionCollection = db.collection("predictions");
 
 async function storeData(id, data) {
